@@ -1,0 +1,30 @@
+{
+    "name" : "prange",
+    "version" : "0.0.0",
+    "description" : "Parses poker hand range short descriptions into a range array.",
+    "main" : "prange.js",
+    "scripts" : {
+      "test" : "set -e; for t in test/*.js; do node $t; done"
+    },
+    "repository" : {
+      "type" : "git",
+      "url" : "git://github.com/thlorenz/prange.git"
+    },
+    "homepage" : "https://github.com/thlorenz/prange",
+    "dependencies" : {
+    },
+    "devDependencies" : {
+      "tape": "~4.6.3"
+    },
+    "keywords": [] ,
+    "author" : {
+      "name" : "Thorsten Lorenz",
+      "email" : "thlorenz@gmx.de",
+      "url" : "http://thlorenz.com"
+    },
+    "license" : {
+      "type": "MIT",
+      "url": "https://github.com/thlorenz/prange/blob/master/LICENSE"
+    },
+    "engine" : { "node" : ">=0.10" }
+}
