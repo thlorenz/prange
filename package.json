@@ -15,7 +15,7 @@
   "devDependencies": {
     "tape": "~4.6.3"
   },
-  "keywords": [],
+  "keywords": [ "poker", "range", "parser" ],
   "author": {
     "name": "Thorsten Lorenz",
     "email": "thlorenz@gmx.de",
@@ -26,6 +26,6 @@
     "url": "https://github.com/thlorenz/prange/blob/master/LICENSE"
   },
   "engine": {
-    "node": ">=0.10"
+    "node": ">=6"
   }
 }
