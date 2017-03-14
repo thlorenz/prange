@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#prange'
+                  class="">
+                  prange
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#prangereverse'
+                  class="">
+                  prange.reverse
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='prange'>
+      prange
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts a short notation for poker hand ranges into an array
+filled with the matching combos.</p>
+<p>Each range specifier is separated by a comma.</p>
+<p>The following notations are supported:</p>
+<ul>
+<li>single combos <code>KK, AK, ATs</code></li>
+<li>
+<p>plus notation</p>
+<ul>
+<li><code>QQ+</code> = <code>[ AA, KK, QQ ]</code></li>
+<li><code>KTs+</code> = <code>[ KQs, KJs, KTs ]</code></li>
+<li><code>KTo+</code> = <code>[ KQo, KJo, KTo ]</code></li>
+<li><code>KT+</code> = <code>[ KQs, KQo, KJo, KJs, KTo, KTs ]</code></li>
+</ul>
+</li>
+<li>
+<p>dash notation</p>
+<ul>
+<li><code>KK-JJ</code> = <code>[ KK, QQ, JJ ]</code></li>
+<li><code>AKo-ATo</code> = <code>[ AK, AQ, AJ, AT ]</code></li>
+<li><code>AKs-JTs</code> = <code>[ AKs, KQs, JTs ]</code></li>
+</ul>
+</li>
+</ul>
+
+
+  <div class='pre p1 fill-light mt0'>prange(s: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>s</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    the short notation for the range
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>></code>:
+        all hand combos satisfying the given range
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='prangereverse'>
+      prange.reverse
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts a poker hand range to short notation.
+It's the opposite of <code>prange</code>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>prange.reverse(combos: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>>, the: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>combos</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>>)</code>
+	    hand combos to be converted to short notation
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>the</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    short notation for the range
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
