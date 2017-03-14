@@ -1,6 +1,6 @@
 {
   "name": "prange",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Parses poker hand range short descriptions into a range array.",
   "main": "prange.js",
   "scripts": {
