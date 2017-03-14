@@ -55,6 +55,16 @@ The following notations are supported:
 
 Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** all hand combos satisfying the given range
 
+### prange.reverse
+
+Converts a poker hand range to short notation.
+It's the opposite of `prange`.
+
+**Parameters**
+
+-   `combos` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>** hand combos to be converted to short notation
+-   `the` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** short notation for the range
+
 ## License
 
 MIT
