@@ -45,6 +45,8 @@ test('\nsuited connectors', function(t) {
     , 'JTs-98s, 76s-54s' ]
   , [ [ 'JTs', 'J9s', 'J8s', 'JTo', 'J9o', 'J8o', 'T9s', '98s', '87s', '76s', '65s', '54s' ]
     , 'J8+, T9s-54s' ]
+  , [ [ 'JTs', 'T9s', '98s', '87s' ], 'JTs-87s' ]
+  , [ [ 'AKs', 'KQs', 'QJs' ], 'AKs-QJs' ]
   ].forEach(check)
 
   function check([ nonpairs, reversed ]) {
