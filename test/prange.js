@@ -68,3 +68,29 @@ test('\nplus notation', function(t) {
   )
   t.end()
 })
+
+test('\nsingle combos', function(t) {
+  let s = 'AKo, AQs, AJ'
+  t.deepEqual(prange(s), [ 'AKo', 'AQs', 'AJo', 'AJs' ], s)
+
+  t.end()
+})
+
+test('\nseparation by spaces and error correction', function(t) {
+  let s = 'AKo AQs AJ'
+  t.deepEqual(prange(s), [ 'AKo', 'AQs', 'AJo', 'AJs' ], s)
+  s = 'AKo  AQs AJ'
+  t.deepEqual(prange(s), [ 'AKo', 'AQs', 'AJo', 'AJs' ], s)
+  s = 'AKo  AQs     ,     AJ'
+  t.deepEqual(prange(s), [ 'AKo', 'AQs', 'AJo', 'AJs' ], s)
+
+  s = 'AKs - ATs AJ'
+  t.deepEqual(prange(s), [ 'AKs', 'AQs', 'AJs', 'AJo', 'ATs' ], s)
+
+  s = 'AKs - AQs, AJs    - ATs AJ'
+  t.deepEqual(prange(s), [ 'AKs', 'AQs', 'AJs', 'AJo', 'ATs' ], s)
+
+  s = 'AJs +  ,AT AJ'
+  t.deepEqual(prange(s), [ 'AKs', 'AQs', 'AJs', 'AJo', 'ATo', 'ATs' ], s)
+  t.end()
+})

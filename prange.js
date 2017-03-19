@@ -126,7 +126,11 @@ function subrange(s) {
   if (plusRangeRx.test(s)) {
     return plus(s.replace(/\+/, ''))
   }
-  if (oneComboRx.test(s)) return [ s ]
+  if (oneComboRx.test(s)) {
+    const [ r1, r2, suit ] = s.trim()
+    if (r1 === r2 || suit != null) return [ s ]
+    return [ s + 'o', s + 's' ]
+  }
 
   throw new Error(`Invalid range/combo specifier ${s}`)
 }
@@ -157,7 +161,19 @@ function subrange(s) {
  */
 function prange(s) {
   const set = new Set()
-  const subs = s.split(/,/).map(x => x.trim())
+  const subs = s
+     // correct things like AJs -A9s to AJs-A9s
+    .replace(
+      /([A,K,Q,J,T,2-9]{2}[o,s]?)\s*-\s*([A,K,Q,J,T,2-9]{2}[o,s]?)/g
+      , '$1-$2'
+    )
+    // correct AK + to AK+
+    .replace(
+      /([A,K,Q,J,T,2-9]{2}[o,s]?)\s\+/g
+      , '$1+'
+    )
+    // split at any white space or comma (any errornous space was removed via replace)
+    .split(/[,\s]+/).map(x => x.trim())
   for (let i = 0; i < subs.length; i++) {
     const res = subrange(subs[i])
     res.forEach(x => set.add(x))
