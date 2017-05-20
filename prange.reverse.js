@@ -61,3 +61,4 @@ function reverse(combos) {
 }
 
 module.exports = reverse
+module.exports.sortOut = sortOut

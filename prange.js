@@ -183,3 +183,4 @@ function prange(s) {
 
 module.exports = prange
 module.exports.reverse = require('./prange.reverse')
+module.exports.categorize = module.exports.reverse.sortOut
