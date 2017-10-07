@@ -1,3 +1,5 @@
+'use strict'
+
 const reversePairs = require('./lib/reverse-pairs')
 const reverseNonPairs = require('./lib/reverse-non-pairs')
 

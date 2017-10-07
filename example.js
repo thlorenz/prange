@@ -1,3 +1,5 @@
+'use strict'
+
 const prange = require('./')
 
 const r1 = prange('AKs-ATs, QQ+')

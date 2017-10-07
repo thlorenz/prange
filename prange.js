@@ -1,3 +1,5 @@
+'use strict'
+
 const { codeRanks, rankCodes, byCodeRankDescending } = require('./lib/core')
 
 const dashRangeRx = /[A,K,Q,J,T,2-9]{2}[o,s]?-[A,K,Q,J,T,2-9]{2}[o,s]?$/
